@@ -1,0 +1,162 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f0f0f0;
+}
+
+
+
+nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+}
+
+nav ul li {
+   position: relative;
+}
+
+nav ul li a {
+   color: white;
+   text-decoration: none;
+   padding: 10px;
+   display: block;
+}
+
+nav ul li:hover .dropdown {
+   display: block;
+}
+
+.dropdown {
+   display: none;
+   position: absolute;
+   background-color: white;
+   color: black;
+   min-width: 160px;
+   z-index: 1;
+}
+
+.dropdown li {
+   padding: 10px;
+   text-align: left;
+}
+
+.dropdown li a {
+   color: black;
+}
+
+main {
+   padding: 20px;
+   text-align: center;
+}
+
+.ticket-container {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.ticket-card {
+   background-color: white;
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   width: 200px;
+   margin: 10px;
+   text-align: center;
+}
+
+.ticket-card img {
+   width: 100px;
+   height: 100px;
+}
+
+.ticket-card h3 {
+   margin: 10px 0 5px 0;
+}
+
+.ticket-card p {
+   margin: 5px 0;
+}
+
+.edit-ticket, .delete-btn, .add-ticket-btn, .manage-btns button {
+   background-color: #f44336;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   padding: 10px;
+   cursor: pointer;
+   margin: 5px 0;
+}
+
+.edit-ticket:hover, .delete-btn:hover, .add-ticket-btn:hover, .manage-btns button:hover {
+   background-color: #d32f2f;
+}
+
+.add-ticket-btn {
+   background-color: #4caf50;
+}
+
+.add-ticket-btn:hover {
+   background-color: #388e3c;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+   background-color: white;
+   margin: 15% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 300px;
+   border-radius: 8px;
+   text-align: left;
+}
+
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover, .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+#ticketForm label {
+   display: block;
+   margin: 10px 0 5px 0;
+}
+
+#ticketForm input[type="file"], #ticketForm input[type="text"], #ticketForm input[type="number"], #ticketForm button {
+   width: 100%;
+   padding: 10px;
+   margin: 5px 0 15px 0;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+
+.manage-btns {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.manage-btns button {
+   margin: 0 10px;
+}
